@@ -7,7 +7,7 @@ import { CreateTaskDTO } from 'src/common/dto/create-task.dto';
 import { PrismaService } from 'src/lib/prisma/prisma.service';
 
 @Injectable()
-export class UserService {
+export class TaskService {
   constructor(private readonly prismaService: PrismaService) {}
   async createTask(userId: string, createTaskDTO: CreateTaskDTO) {
     const user = await this.prismaService.user.findFirst({
